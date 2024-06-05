@@ -25,11 +25,11 @@ export const RegisterPage = () => {
     }
 
     const { name, email, password } = form;
-    const ok = await register(name, email, password);
-    if (!ok) {
+    const msg = await register(name, email, password);
+    if (msg !== true) {
       Swal.fire({
         title: "Error",
-        text: "Error en el registro",
+        text: msg,
         icon: "error",
         buttonsStyling: false,
         confirmButtonText: "Aceptar",
@@ -97,7 +97,11 @@ export const RegisterPage = () => {
       </div>
 
       <div className="container-login100-form-btn m-t-17">
-        <button disabled={!todoOk} className="login100-form-btn">
+        <button
+          typeç="submit"
+          disabled={!todoOk()}
+          className="login100-form-btn"
+        >
           Crear cuenta
         </button>
       </div>
