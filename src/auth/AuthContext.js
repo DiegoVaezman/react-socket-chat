@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
     const res = await fetchSinToken("login", "POST", { email, password });
     if (res.ok) {
       localStorage.setItem("token", res.token);
-      const { email, name, online, uid } = res.user;
+      const { email, name, uid } = res.user;
       setAuth({
         uid,
         checking: false,
