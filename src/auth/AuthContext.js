@@ -30,7 +30,6 @@ export const AuthProvider = ({ children }) => {
         name,
         email,
       });
-      console.log("Autenticado");
     }
     return res.ok;
   };
@@ -51,7 +50,6 @@ export const AuthProvider = ({ children }) => {
         name,
         email,
       });
-      console.log("Autenticado");
       return true;
     }
     return res.msg;
@@ -79,7 +77,6 @@ export const AuthProvider = ({ children }) => {
         name,
         email,
       });
-      console.log("Autenticado");
       return true;
     } else {
       setAuth({

@@ -14,7 +14,6 @@ export const SidebarCharItem = ({ usuario }) => {
       payload: usuario.uid,
     });
     const res = await fetchConToken(`messages/${usuario.uid}`);
-    console.log(res);
     dispatch({
       type: types.cargarMensajes,
       payload: res.messages,
